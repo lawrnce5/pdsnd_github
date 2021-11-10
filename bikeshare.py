@@ -1,4 +1,4 @@
-
+name_of_day
 import time
 import pandas as pd
 import numpy as np
@@ -20,7 +20,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    #Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city_name = ''
     while city_name.lower() not in CITY_DATA:
         city_name = input("\nWhat is the name of the city to analyze data? (E.g. Input either chicago, new york city, washington)\n")
@@ -29,7 +29,7 @@ def get_filters():
         else:
             print("Sorry we were not able to get the name of the city to analyze data, Please input either chicago, new york city or washington.\n")
 
-    # Get user input for month (all, january, february, ... , june)
+    # user input for month (all, january, february, ... , june)
     month_name = ''
     while month_name.lower() not in MONTHLY_DATA:
         month_name = input("Which month? January, February, March, April, May, or June?")
@@ -38,12 +38,12 @@ def get_filters():
         else:
             print("Sorry we were not able to get the name of the month to filter data, Please input either 'all' to apply no month filter or january, february, ... , june.\n")
 
-    # Get user input for day of week (all, monday, tuesday, ... sunday)
-    day_name = ''
-    while day_name.lower() not in DAILY_DATA:
-        day_name = input("\nWhich day?Please type your response as a day of the week(e.g, Sunday\n")
-        if day_name.lower() in DAILY_DATA:
-            day = day_name.lower()
+    # user input for day of week (all, monday, tuesday, ... sunday)
+    name_of_day = ''
+    while name_of_day.lower() not in DAILY_DATA:
+        name_of_day = input("\nWhich day?Please type your response as a day of the week(e.g, Sunday\n")
+        if name_of_day.lower() in DAILY_DATA:
+            day = name_of_day.lower()
         else:
             print("Sorry we were not able to get the name of the day, Please input either 'all' to apply no day filter or monday, tuesday, ... sunday.\n")
 
@@ -64,12 +64,12 @@ def load_data(city, month, day):
     # loading data file into a dataframe
     df = pd.read_csv(city)
 
-    # converting the Start Time and End Time into date format yyy-mm-dd 
+    # converting the Start Time and End Time into date format yyy-mm-dd
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
     # extract month and day of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
-    df['day_of_week'] = df['Start Time'].dt.weekday_name
+    df['day_of_week'] = df['Start Time'].dt.weekname_of_day
     df['hour'] = df['Start Time'].dt.hour
 
 
