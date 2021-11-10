@@ -27,10 +27,10 @@ Interesting data like:
 
 ### Files used
 To view project, your environment must have NumPy and Pandas. Then Load 'project.py' on your terminal.Then you will need the three city dataset files to explorer the Data:
-Python.py
-New_York_city.csv
-Washington.csv
-chicago.csv
+1.Python.py
+2.New_York_city.csv
+3.Washington.csv
+4.chicago.csv
 
 ### Credits
 https://stackoverflow.com/questions/1139762/ignore-files-that-have-already-been-committed-to-a-git-repository
