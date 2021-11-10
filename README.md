@@ -26,7 +26,7 @@ Interesting data like:
 1.Counts of each user type 2.Counts of each gender (only available for NYC and Chicago) 3.Earliest, most recent, most common year of birth (only available for NYC and Chicago)
 
 ### Files used
-Load 'project.py' on your terminal. Your environment to have NumPy and Pandas You will need the three city dataset files too:
+To view project, your environment must have NumPy and Pandas. Then Load 'project.py' on your terminal.Then you will need the three city dataset files to explorer the Data:
 Python.py
 New_York_city.csv
 Washington.csv
@@ -35,3 +35,5 @@ chicago.csv
 ### Credits
 https://stackoverflow.com/questions/1139762/ignore-files-that-have-already-been-committed-to-a-git-repository
 https://stackoverflow.com/questions/1783405/how-do-i-check-out-a-remote-git-branch?rq=1
+
+https://stackoverflow.com/questions/35078633/how-to-create-a-branch-in-git-basing-it-on-a-remote-branch?noredirect=1&lq=1
