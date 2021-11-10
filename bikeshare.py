@@ -11,7 +11,7 @@ MONTHLY_DATA = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 
 DAILY_DATA = ['all', 'monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'sunday']
 
-def get_filters():
+def get_changes():
     """
     Asks user to specify a city, month, and day to analyze.
     Returns:
@@ -207,7 +207,7 @@ def display_raw_data(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
+        city, month, day = get_changes()
         df = load_data(city, month, day)
 
         time_stats(df)
